@@ -9,7 +9,6 @@ public class MaquinaDeTuring {
         String entrada = "C:\\Users\\Usuario\\Documents\\NetBeansProjects\\Maquina de Turing\\src\\maquina\\de\\turing\\entrada.txt";
         String saida = "C:\\Users\\Usuario\\Documents\\NetBeansProjects\\Maquina de Turing\\src\\maquina\\de\\turing\\saída.txt";
         Leitor l = new Leitor(funcao, entrada, saida);
-        String read = "a", direction = "R";
         System.out.println(l.verificar());
     }
     
