@@ -46,6 +46,9 @@ public class Leitor {
                 ext.close();
                 return 1;
             }
+            else if(i>=input.length){
+                return 0;
+            }
             linha = leitor.split(" ");
             if(linha[0].equals(posicaoAtual) && linha[1].equals(input[i])){
                 posicaoAtual=linha[4];
