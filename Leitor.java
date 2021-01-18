@@ -35,8 +35,8 @@ public class Leitor {
         int i = 0;
         input = lerEntrada().split("");
         String leitor = "";
+        func.mark(10000);
         while (leitor != null) {
-            func.mark(0);
             if(i>=input.length&&posicaoAtual.contains("qf")){
                 for (String input1 : input) {
                     ext.append(input1);
@@ -47,6 +47,12 @@ public class Leitor {
                 return 1;
             }
             else if(i>=input.length){
+                for (String input1 : input) {
+                    ext.append(input1);
+                }
+                func.close();
+                ent.close();
+                ext.close();
                 return 0;
             }
             linha = leitor.split(" ");
@@ -56,7 +62,7 @@ public class Leitor {
                 if(linha[3].equals("R")){
                     i++;
                 }
-                else{
+                else if (linha[3].equals("L")){
                     i--;
                 }
                 func.reset();
@@ -65,7 +71,14 @@ public class Leitor {
                 leitor = func.readLine();
             }
         }
+        for (String input1 : input) {
+                    ext.append(input1);
+                }
+                func.close();
+                ent.close();
+                ext.close();
         return 0;
     }
     
 }
+
