@@ -1,2 +1,9 @@
 q0 a A R q1
-q1 b B R qf
+q0 B B R q0
+q1 a a R q1
+q1 B B R q1
+q1 b B L q2
+q2 a a L q2
+q2 B B L q2
+q2 A A R q0
+q0 x X R qf
